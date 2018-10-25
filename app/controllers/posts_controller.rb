@@ -17,8 +17,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-  end
+  @post = Post.new(author_id: params[:author_id])
+end
 
   def create
     @post = Post.new(post_params)
